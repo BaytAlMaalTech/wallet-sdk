@@ -1,0 +1,33 @@
+{
+  "name": "@baytalmaalttech/sovereign-wallet-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for Islamic banks to integrate with SHARIAH OVERLORD sovereign fiat system",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["shariah", "islamic-finance", "halal", "central-bank", "cbdc", "zakat", "murabahah"],
+  "license": "MIT",
+  "author": "BaytAlMaalTech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BaytAlMaalTech/wallet-sdk"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "tsup": "^8.1.0",
+    "vitest": "^1.6.0"
+  }
+}
